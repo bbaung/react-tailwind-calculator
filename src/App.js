@@ -17,6 +17,8 @@ function App() {
         >
           Learn React
         </a>
+
+        <h1 className='text-5xl'>React Tailwind Frame</h1>
       </header>
     </div>
   );
