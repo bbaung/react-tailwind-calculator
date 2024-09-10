@@ -6,6 +6,12 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `set_up`
+
+"npm install"\
+"npm install -D tailwindcss"\
+"npx tailwindcss init"
+
 ### `npm start`
 
 Runs the app in the development mode.\
