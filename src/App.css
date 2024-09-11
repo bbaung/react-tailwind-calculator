@@ -36,3 +36,18 @@
     transform: rotate(360deg);
   }
 }
+
+
+/* Calculator */
+
+.Calculator .key{
+  @apply bg-cal_tertiary_bg rounded-xl p-4;
+}
+
+.Calculator .key:hover{
+  @apply shadow-[inset_0_35px_60px_-15px_rgba(0,0,0,0.3)];
+}
+
+.Calculator .operator{
+  @apply text-cal_red
+}
