@@ -13,6 +13,12 @@ module.exports = {
         "cal_red" : "#EB6666",
       }
     },
+    screens: {
+      "sm" : "320px" ,
+      "ml" : "425px",
+      "md" : "768px",
+      "lg" :  "1280px" ,
+    },
   },
   plugins: [],
 }
