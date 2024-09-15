@@ -51,3 +51,7 @@
 .Calculator .operator{
   @apply text-cal_red
 }
+
+.Calculator .action{
+  @apply text-cal_green
+}
