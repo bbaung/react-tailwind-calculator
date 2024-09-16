@@ -2,28 +2,51 @@ import React, { useState } from 'react';
 import "../App.css";
 
 
-
 function Calculator() {
 
-    const [input , setInput] = useState("120");
+    const [input , setInput] = useState("0");
 
-    const [output , setOutput] = useState("12000");
+    const [output , setOutput] = useState("0");
+
+    const [result , setResult] = useState("0") ;
 
     const clear = () => {
         setOutput("0");
         setInput("0");
+        setResult("0");
     }
 
     const calculate = () => {
-        setOutput(eval(input));
+        setOutput(eval(result));
     }
 
     const add_in = e => {
-        let key = e.target.getAttribute("data-key");
-        // setInput(input.concat(key));
-        // setInput(input += key );
-        console.log("key :",key)
+        const key_input = e.currentTarget.querySelector('.key span').innerHTML;
+        const key_result = e.currentTarget.getAttribute('data-key');
+
+        if (input == 0) {
+            setInput(key_input); 
+            setResult(key_result);
+        } else {
+            setInput(input.concat(key_input)); 
+            setResult(result.concat(key_result));
+        }      
+        // console.log('key_input :',key_input);
+        // console.log('key_result :', key_result);
+        // console.log('result :',result)
     }
+
+    const one_clear = () =>{
+
+        if (input.length == 1) {
+            setInput("0");
+            setResult("0");
+        }else if(input != 0) {
+            setInput(input.slice(0,-1));
+            setResult(result.slice(0,-1));
+        }
+    }
+
 
     return(
         <div className="Calculator flex flex-col flex-auto">
@@ -40,7 +63,7 @@ function Calculator() {
                         <span>AC</span>
                     </button>
 
-                    <button type='button' className="key operator">
+                    <button type='button' onClick={one_clear} className="key operator">
                         <span>DE</span>
                     </button>
 
