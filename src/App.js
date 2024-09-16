@@ -5,7 +5,7 @@ import Calculator from "./components/Calculator";
 
 function App() {
   return (
-    <div className="py-5 bg-slate-500">
+    <div className="py-5">
       <div className="w-[1280px] mx-auto">
 
         <div className="flex flex-col w-full ml:w-80 h-[1500px] ml:h-auto mx-auto">
